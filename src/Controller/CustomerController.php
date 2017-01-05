@@ -11,11 +11,11 @@ class CustomerController
         $this->customerModel = new CustomerModel();
     }
 
-
     public function addAction()
     {
         if (isset($_POST['submit'])) {
-            $this->customerModel->insert($_POST, $_FILES);
+            $this->customerModel->insert($_POST);
+            header('location:/php-mvc/index.php/customer/list');
         }
 
         include 'views/Customer/add.php';

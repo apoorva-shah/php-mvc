@@ -18,12 +18,27 @@ class CustomerModel extends Connection
         }
 
         return $rows;
-
     }
 
     public function insert($data)
     {
-        
+        $conn = $this->getConn();
+        $name = $this->escapeString($conn, $data['name']);
+
+        $sql = "INSERT INTO customer (name) VALUES ('$name')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        $conn->close();
+    }
+
+    private function  escapeString($conn, $string)
+    {
+        return mysqli_escape_string($conn, $string);
     }
 }
 
