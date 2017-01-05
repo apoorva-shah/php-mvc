@@ -1,3 +1,8 @@
+<?php
+    include 'views/common/header.php';
+?>
+<br/><br/><br/><br/>
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
