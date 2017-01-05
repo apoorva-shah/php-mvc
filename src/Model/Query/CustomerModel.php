@@ -1,6 +1,6 @@
 <?php
 
-include '/../Database/Connection.php';
+include 'src/Model/Database/Connection.php';
 
 class CustomerModel extends Connection
 {

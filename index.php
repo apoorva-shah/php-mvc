@@ -5,6 +5,7 @@
 // load and initialize any global libraries
 require_once 'src/Controller/CustomerController.php';
 
+
 // route the request internally
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 

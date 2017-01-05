@@ -1,6 +1,6 @@
 <?php
 
-include '/../Model/Query/CustomerModel.php';
+include 'src/Model/Query/CustomerModel.php';
 
 class CustomerController
 {
@@ -18,7 +18,7 @@ class CustomerController
             $this->customerModel->insert($_POST, $_FILES);
         }
 
-        include '/../../views/Customer/add.php';
+        include 'views/Customer/add.php';
     }
 
     public function editAction($id)
@@ -27,7 +27,7 @@ class CustomerController
         echo "you are in edit action";
         // you get id here so you can get row data of that id from table
 
-        include '/../../views/Customer/edit.php';
+        include 'views/Customer/edit.php';
     }
 
     public function listAction()
@@ -38,7 +38,7 @@ class CustomerController
             'customers' => $customers
         ];
 
-        include '/../../views/Customer/list.php';
+        include 'views/Customer/list.php';
     }
 }
 
